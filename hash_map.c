@@ -1,7 +1,7 @@
 /*
  * Generic map implementation.
  */
-#include "hashmap.h"
+#include "hash_map.h"
 
 #define INITIAL_SIZE (1024*1024)
 #define MAX_CHAIN_LENGTH (8)

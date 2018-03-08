@@ -9,7 +9,7 @@
 #include <sys/time.h>
 #include <time.h>
 
-#include "hashmap.h"
+#include "hash_map.h"
 
 long util_time_elapsed(struct timeval start, struct timeval end) {
     long secs_used,micros_used;
