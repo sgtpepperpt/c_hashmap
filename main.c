@@ -20,7 +20,7 @@ long util_time_elapsed(struct timeval start, struct timeval end) {
 }
 
 #define KEY_LENGTH (64)
-#define KEY_COUNT (256*256)
+#define KEY_COUNT (10000000)
 
 typedef struct data_struct_s {
     char key_string[KEY_LENGTH];
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         /* Store the key string along side the numerical value so we can free it later */
         value = malloc(sizeof(data_struct_t));
         snprintf(value->key_string, KEY_LENGTH, "%063d", i);
-        printf("%s %d\n", value->key_string, i);
+
         value->number = i;
 
         error = hashmap_put(mymap, value->key_string, value);
